@@ -1,6 +1,0 @@
-# Pin exact versions before deploying - these are known-working as of early
-# 2026 but check PyPI for newer patch releases.
-fastapi>=0.115,<1.0
-onnxruntime>=1.19,<2.0
-transformers>=4.44,<5.0
-numpy>=1.26,<2.0
