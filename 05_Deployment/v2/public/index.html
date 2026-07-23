@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Review Sentiment Lab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Check the sentiment of any product review, then browse what 52,000+ Amazon device reviews really say across seven categories." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brand">Review Sentiment<span class="dot">.</span>Lab</div>
+      <nav>
+        <a href="#checker">Analyzer</a>
+        <a href="#categories">Categories</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section class="hero" id="checker">
+      <span class="eyebrow">Amazon devices report</span>
+      <h1>Paste a review. Read its sentiment.</h1>
+      <p class="lede">A quick classifier for single reviews, backed by a full breakdown of 52,000+ real customer reviews across e-readers, tablets, and smart assistants.</p>
+
+      <div class="checker">
+        <label for="text">Paste a product review</label>
+        <textarea id="text" placeholder="e.g. “Battery life is incredible but the screen scratches if you look at it wrong…”"></textarea>
+        <div class="checker-footer">
+          <span class="hint">Scored on positive / neutral / negative</span>
+          <button id="submit">Analyze</button>
+        </div>
+        <div id="result"></div>
+      </div>
+    </section>
+
+    <section class="section-head" id="categories">
+      <h2>What the reviews really say</h2>
+      <p>We analyzed 52,984 customer reviews across 109 products in 7 categories. Each card is a category — open one for the top-rated products, what owners love, and the most common complaints.</p>
+    </section>
+
+    <div class="grid">
+
+      <a class="card" href="categories/e-readers.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">E-Readers</div>
+            <div class="card-stats"><span class="stat">849</span> reviews · <span class="stat">10</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="147.7 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(79.2deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">Kindle Voyage — 4.7★ (580 reviews)</div>
+        <p class="card-teaser">Owners praise the lightweight build and adjustable backlight — but freezing and screen damage are recurring complaints.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+      <a class="card" href="categories/tablets.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">Tablets</div>
+            <div class="card-stats"><span class="stat">18,641</span> reviews · <span class="stat">16</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="141.4 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(72deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">Fire Tablet 7" Magenta — 4.5★ (10,962 reviews)</div>
+        <p class="card-teaser">Great value and reading experience for the price, though screen brightness and app compatibility draw complaints.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+      <a class="card" href="categories/tablets-with-alexa.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">Tablets with Alexa</div>
+            <div class="card-stats"><span class="stat">4,628</span> reviews · <span class="stat">12</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="144.5 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(75.6deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">Fire HD 8 Tangerine — 4.6★ (2,435 reviews)</div>
+        <p class="card-teaser">Praised for screen quality and parental controls, but excessive ads and connectivity issues frustrate owners.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+      <a class="card" href="categories/tablets-for-kids.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">Tablets for Kids</div>
+            <div class="card-stats"><span class="stat">5,366</span> reviews · <span class="stat">6</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="141.4 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(72deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">Fire Kids Edition, Pink — 4.5★ (1,663 reviews)</div>
+        <p class="card-teaser">Durable and kid-friendly with solid parental controls — screen fragility and hidden fees are the sticking points.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+      <a class="card" href="categories/smart-assistants.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">Smart Assistants</div>
+            <div class="card-stats"><span class="stat">4,786</span> reviews · <span class="stat">13</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="144.5 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(75.6deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">Echo (White) — 4.6★ (3,310 reviews)</div>
+        <p class="card-teaser">Reliable voice control and value, tempered by build-quality concerns on refurbished units.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+      <a class="card" href="categories/chargers-adapters.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">Chargers & Adapters</div>
+            <div class="card-stats"><span class="stat">354</span> reviews · <span class="stat">12</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="141.4 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(72deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">Amazon 5W USB Charger — 4.5★ (207 reviews)</div>
+        <p class="card-teaser">Reliable and official, though some feel it's overpriced for what's included in the box.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+      <a class="card" href="categories/others.html">
+        <div class="card-top">
+          <div>
+            <div class="card-title">Others</div>
+            <div class="card-stats"><span class="stat">18,360</span> reviews · <span class="stat">40</span> products</div>
+          </div>
+          <svg class="gauge" viewBox="0 0 120 70" aria-hidden="true">
+            <path class="track" d="M10,60 A50,50 0 0 1 110,60"/>
+            <path class="fill" d="M10,60 A50,50 0 0 1 110,60" stroke-dasharray="138.2 157.08"/>
+            <line class="needle" x1="60" y1="60" x2="60" y2="18" style="transform: rotate(68.4deg)"/>
+            <circle class="pivot" cx="60" cy="60" r="4"/>
+          </svg>
+        </div>
+        <div class="card-lead">Top rated</div>
+        <div class="card-product">AmazonBasics AAA Batteries — 4.4★ (7,555 reviews)</div>
+        <p class="card-teaser">Affordable and comparable to name brands, though some batches report leakage or a short lifespan.</p>
+        <div class="card-foot">
+          <span class="view-link">View category →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="wrap">Review Sentiment Lab · analysis of 52,984 customer reviews across 109 products.</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("submit");
+    const textEl = document.getElementById("text");
+    const resultEl = document.getElementById("result");
+
+    btn.addEventListener("click", async () => {
+      const text = textEl.value.trim();
+      if (!text) return;
+
+      btn.disabled = true;
+      btn.textContent = "Analyzing...";
+      resultEl.style.display = "none";
+
+      try {
+        const res = await fetch("/api/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text }),
+        });
+        const data = await res.json();
+
+        if (data.error) throw new Error(data.error);
+
+        resultEl.className = data.label;
+        resultEl.style.display = "block";
+        resultEl.innerHTML = `
+          <strong>Sentiment: ${data.label}</strong>
+          <div class="scores">
+            ${Object.entries(data.scores)
+              .map(([k, v]) => `${k}: ${(v * 100).toFixed(1)}%`)
+              .join(" &nbsp;·&nbsp; ")}
+          </div>`;
+      } catch (err) {
+        resultEl.className = "";
+        resultEl.style.display = "block";
+        resultEl.textContent = "Error: " + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Analyze";
+      }
+    });
+  </script>
+</body>
+</html>
