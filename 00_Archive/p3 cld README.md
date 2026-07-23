@@ -31,9 +31,9 @@ This project aims to develop a product review system powered by NLP models that 
 
 <center>
 <table>
-  <td><img src="/images/deploy_streamlit_02_pred_260710.jpg" height="420" alt="Horse prediction"></td>
+  <td><img src="./00_Archive/images/SentimentReviewLAB_Negative.jpg" height="420" alt="SentimentReviewLAB_Negative"></td>
   <td> &nbsp &nbsp </td>
-  <td><img src="/images/deploy_streamlit_02_pred_260710.jpg" height="420" alt="Dookie prediction"></td>
+  <td><img src="./00_Archive/images/SentimentReviewLAB_Neutral.jpg" height="420" alt="SentimentReviewLAB_Neutral"></td>
 </table>
 </center>
 
