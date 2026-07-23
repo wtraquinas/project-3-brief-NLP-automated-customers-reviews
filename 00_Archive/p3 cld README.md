@@ -17,7 +17,7 @@ This project aims to develop a product review system powered by NLP models that 
 | 1. Sentiment Analysis            | Hugging Face tokenizer      | `distilbert-base-uncased` (fine-tuned) | 90.8%   | 3,295 reviews | Macro F1 0.848; weakest on the minority `neutral` class (F1 0.717), strongest on `positive` (F1 0.957) |
 | 2. Product Category Clustering   | TF‑IDF (word n-grams)       | KMeans + rule-based mapping        | n/a (unsupervised) | — | Hybrid approach: KMeans clusters on cleaned product names, refined with `primaryCategories` into 5 final meta-categories |
 | 3. Product Review Summarization  | Prompted generation         | `meta-llama/Llama-3.2-3B-Instruct` | n/a (generative) | — | Evaluated qualitatively (readability/faithfulness of generated summaries), not via classification accuracy |
-| 4.                                |                              |                                     |          |          |                                                                                               |
+| 4. Product Review Summarization                                |    Hugging Face tokenizer                           | `distilbert-base-uncased`                                     |          |          |                                                                                               | the new transformers did not provide the summarization task
 | 5.                                |                              |                                     |          |          |                                                                                               |
 | 6.                                |                              |                                     |          |          |                                                                                               |
 
@@ -121,7 +121,13 @@ See [`03_Product_Category_Clustering/3_prodcat.ipynb`](03_Product_Category_Clust
 - **Approach**: Prompted `meta-llama/Llama-3.2-3B-Instruct` with the reviews for each category (grouped by the 5 meta-categories from step 2) to generate, for each category: the top products with review counts and average ratings, what reviewers like about the top products ("what sets it apart"), the most common complaints, and a "worst product in the category" callout with the reason to avoid it.
 - **Output**: See [`04_Product_Review_Summarization/category_summaries.md`](04_Product_Review_Summarization/category_summaries.md) for the generated summaries.
 
+
+<br>
+
+
 ---
+
+
 
 ## Pipeline
 
@@ -148,6 +154,10 @@ clean_reviews.csv  (single source of truth for all downstream tasks)
                     served on Vercel (sentiment prediction API)
 ```
 
+<br>
+
+--- 
+
 ### Text Preprocessing
 
 - Merged the 3 raw Datafiniti export files and removed duplicate reviews (same product + review text + rating).
@@ -155,6 +165,10 @@ clean_reviews.csv  (single source of truth for all downstream tasks)
 - Treated `id` as unreliable (the same `id` was found attached to unrelated products in ~11% of reviews) and used the cleaned product name as the trusted identifier instead.
 - For clustering: lowercased text, removed punctuation and stopwords, applied stemming/lemmatization to the cleaned product names.
 - For the transformer model: tokenized review text with the Hugging Face tokenizer matching `distilbert-base-uncased`, encoded into vocabulary IDs, and padded sequences to a uniform length.
+
+
+<br>
+
 
 ### Feature Engineering
 
@@ -171,6 +185,10 @@ clean_reviews.csv  (single source of truth for all downstream tasks)
 - **Review Summarization** — Category-level write-ups generated for each meta-category, highlighting top-rated products, recurring praise, common complaints, and the weakest product per category. See [`04_Product_Review_Summarization/category_summaries.md`](04_Product_Review_Summarization/category_summaries.md) for full examples.
 - **Deployment** — The sentiment model was exported to ONNX and deployed as a FastAPI serverless function on Vercel, with the model weights hosted on the Hugging Face Hub and downloaded at cold start.
 
+
+<br>
+
+
 ---
 
 # Setup & Installation
@@ -181,6 +199,9 @@ clean_reviews.csv  (single source of truth for all downstream tasks)
 git clone https://github.com/wtraquinas/project-3-brief-NLP-automated-customers-reviews.git
 cd project-3-brief-NLP-automated-customers-reviews
 ```
+
+<br>
+
 
 ### 2. Notebooks (data prep, modeling, clustering, summarization)
 
@@ -198,6 +219,10 @@ Then run the notebooks in order:
 4. `04_Product_Review_Summarization/4_summarization.ipynb` — prompts `meta-llama/Llama-3.2-3B-Instruct` to generate category summaries
 
 The raw data is provided as `00_Data/original_kaggle_data_download_archive.zip` (containing the 3 source CSVs), so no separate Kaggle download is required.
+
+
+<br>
+
 
 ### 3. Deployment app (sentiment prediction API)
 
@@ -217,6 +242,9 @@ curl -X POST http://localhost:8000/api/predict \
 ```
 
 Deploy with `vercel --prod` once the Hugging Face Hub model repo is set up (see [`05_Deployment/Review Sentiment Lab v2/README.md`](05_Deployment/Review%20Sentiment%20Lab%20v2/README.md) for the full walkthrough, including pushing the model to the Hub).
+
+<br>
+
 
 ---
 
@@ -253,6 +281,9 @@ project-3-brief-NLP-automated-customers-reviews/
 └── README.md
 ```
 
+<br>
+
+
 ---
 
 # Tech Stack
@@ -271,6 +302,10 @@ project-3-brief-NLP-automated-customers-reviews/
 - Vercel — static frontend hosting + serverless functions
 - HTML / CSS / JavaScript — deployed frontend (`public/`)
 
+
+<br>
+
+
 ---
 
 # Future Improvements
@@ -280,6 +315,10 @@ project-3-brief-NLP-automated-customers-reviews/
 - Expand the deployment beyond a single sentiment endpoint into a full **Live Review Aggregator**: a React frontend backed by FastAPI, with a database (SQLite → PostgreSQL) storing submitted reviews, category dashboards, cached category summaries, and charts (rating distribution, sentiment breakdown) — see [`05_Deployment/live review aggregator/README.md`](05_Deployment/live%20review%20aggregator/README.md) for the full roadmap.
 - Polish the current sentiment API frontend: sentiment color badges, a confidence bar, example-review buttons, dark mode, response-time indicator, and interactive API docs.
 - Automate the pipeline end-to-end (new review in → sentiment + category + rolling summary out) instead of running notebooks manually.
+
+
+<br>
+
 
 ---
 
@@ -292,6 +331,10 @@ and
 **David Tayebwa** - https://github.com/kerondavid-debug/
 
 AI Engineering | Machine Learning | NLP
+
+
+<br>
+
 
 ---
 
