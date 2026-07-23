@@ -9,17 +9,8 @@
 
 This project aims to develop a product review system powered by NLP models that aggregate customer feedback from different sources. The key tasks include classifying reviews, clustering product categories, and using generative AI to summarize reviews into recommendation articles.
 
-<br>
 
-## Problem Statement
 
-With thousands of reviews available across multiple platforms, manually analyzing them is inefficient. This project seeks to automate the process using NLP models to extract insights and provide users with valuable product recommendations.
-
-<br>
-
-## Datasets
-
-- **Primary Dataset**: [Amazon Product Reviews from Kaggel](https://www.kaggle.com/datasets/datafiniti/consumer-reviews-of-amazon-products/data)
 
 
 <br>
@@ -56,9 +47,9 @@ With thousands of reviews available across multiple platforms, manually analyzin
 
 
 
-## Sample Prediction
+## Deployment
 
-### Streamlit Application
+### Application hosted on Vercel
 
 <center>
 <table>
@@ -74,36 +65,56 @@ With thousands of reviews available across multiple platforms, manually analyzin
 
 ## Live Demo
 
-🌐 **Streamlit Cloud**
+🌐 **Vercel Hosting API and Application**
 
-[https://project2-nlp-fakenews.streamlit.app](https://project2-nlp-fakenews.streamlit.app)
+:white_check_mark: Application Frontend: 
+https://p3nlp-customers-reviews.vercel.app/
+
+
+:white_check_mark: API Health endpoint: 
+https://p3nlp-customers-reviews.vercel.app/api/health
+
+:white_check_mark: API Prediction endpoint: 
+https://p3nlp-customers-reviews.vercel.app/api/predict
+
+
+<br>
+
 
 ---
 
-# Problem Statement
+## Problem Statement
 
-The rapid spread of misinformation through online news and social media makes it increasingly difficult to distinguish reliable information from fake news.
+With thousands of reviews available across multiple platforms, manually analyzing them is inefficient. This project seeks to automate the process using NLP models to extract insights and provide users with valuable product recommendations.
 
-The objective of this project is to build a machine learning model capable of automatically classifying news articles into:
-
-* **Real**
-* **Fake**
-
-using only the article text.
+<br>
 
 ---
 
-# Dataset
+## Datasets
 
-**Dataset:** Fake News Dataset
+**Primary Dataset - Consumer Reviews of Amazon Products** :
+- https://www.kaggle.com/datasets/datafiniti/consumer-reviews-of-amazon-products/data
+- This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti's Product Database. The dataset includes basic product information, rating, review text, and more for each product.
 
-* File: `dataset/data.csv`
-* Text-based binary classification dataset
+     - File: `original_kaggle_data_download_archive.zip`
+     - containing 3 csv files, with data to be to be merged
+
+
+
 
 
 ---
 
 # Model Architecture
+
+
+
+
+
+
+--- 
+
 
 ## NLP Pipeline
 
