@@ -31,9 +31,9 @@ This project aims to develop a product review system powered by NLP models that 
 
 <center>
 <table>
-  <td><img src="../00_Archive/images/SentimentReviewLAB_Negative.jpg" height="420" alt="SentimentReviewLAB_Negative"></td>
+  <td><img src="../00_Archive/Images/SentimentReviewLAB_Negative.jpg" height="420" alt="SentimentReviewLAB_Negative"></td>
   <td> &nbsp &nbsp </td>
-  <td><img src="../00_Archive/images/SentimentReviewLAB_Neutral.jpg" height="420" alt="SentimentReviewLAB_Neutral"></td>
+  <td><img src="../00_Archive/Images/SentimentReviewLAB_Neutral.jpg" height="420" alt="SentimentReviewLAB_Neutral"></td>
 </table>
 </center>
 
