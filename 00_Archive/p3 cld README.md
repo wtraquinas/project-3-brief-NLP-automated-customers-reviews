@@ -95,17 +95,20 @@ With thousands of reviews available across multiple platforms, manually analyzin
 - **Goal**: Group the catalog's 106 unique cleaned product names into a small set of business-friendly categories, without relying on manual labeling.
 - **Approach**: A hybrid pipeline — TF-IDF vectorization + K-Means clustering on the cleaned product names, with the resulting clusters interpreted and refined using the (partially available but reliable) `primaryCategories` field, then mapped with explicit rules into final meta-categories. This keeps the data-driven discovery of clustering while producing labels that are consistent and easy to explain in a report.
 
-**5 Final Meta-Categories:**
+**7 Final Meta-Categories:**
 
-| Category | Products | Reviews |
-|---|---|---|
-| Tablets | 40 | 29,553 |
-| Accessories & Chargers | 19 | 11,126 |
-| Smart Home & Speakers | 23 | 7,665 |
-| E-Readers | 17 | 4,631 |
-| Non-Electronics | 7 | 9 |
+	cluster	cluster_name	Number of Products
+0	0.0	E-Readers	        849
+1	1.0	Others	                18360
+2	2.0	Tablets for Kids	5366
+3	3.0	Chargers & Adapters	354
+4	4.0	Tablets with Alexa	4628
+5	5.0	Tablets	                18641
+6	6.0	Smart Assistants	4786
 
-See [`03_Product_Category_Clustering/README.md`](03_Product_Category_Clustering/README.md) for the full workflow diagram and methodology writeup.
+
+
+See [`03_Product_Category_Clustering/3_prodcat.ipynb`](03_Product_Category_Clustering/3_prodcat.ipynb) for the full workflow diagram and methodology writeup.
 
 <br>
 
