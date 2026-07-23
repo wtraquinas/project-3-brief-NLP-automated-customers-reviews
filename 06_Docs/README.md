@@ -15,14 +15,6 @@ This project aims to develop a product review system powered by NLP models that 
 
 <br>
 
-## Main Tasks
-
-
-### 1. Build a model for Sentiment Analysis
-
-
-
----
 
 
 ---
@@ -102,12 +94,39 @@ With thousands of reviews available across multiple platforms, manually analyzin
 
 
 
-
+<br>
 
 ---
 
-# Model Architecture
+## Main Tasks
 
+
+### 1. Build a model for Sentiment Analysis
+
+
+
+<br>
+
+---
+
+### 2. Categorization with K-Means Clustering
+
+**7 Clusters --> 7 Categories:**
+     1. Tablets
+     2. Tablets with Alexa
+     3. Tablets for Kids
+     4. E-Readers
+     5. Smart Assistants
+     6. Chargers & Adapters
+     7. Others
+
+
+
+<br>
+
+---
+
+### 3. Summarization
 
 
 
